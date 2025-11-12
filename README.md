@@ -56,7 +56,7 @@ npm run build:server
 
 Build frontend:
 ```bash
-npm build:frontend
+npm run build:frontend
 ```
 
 Run the app:

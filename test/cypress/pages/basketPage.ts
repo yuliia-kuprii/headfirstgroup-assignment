@@ -9,7 +9,13 @@ export class BasketPage {
   }
 
   public increaseApplePomace() {
-    cy.get(this.applePomacePlusButtonSelector).should('be.visible').click();
+    /**
+     * TODO:
+     * Investigate why click is not performed on some machines.
+     * Reproducible on Macbook Pro 2015.
+     * Remove wait(100).
+     */
+    cy.wait(100).get(this.applePomacePlusButtonSelector).should('be.visible').click();
   }
 
   public checkBasketTotalPrice() {

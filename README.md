@@ -1,6 +1,11 @@
 # HeadFirstGroup Assignment
 
 This repository contains the test scenario written as part of the assignment from HeadFirstGroup. 
+As part of the assignment, I: 
+- Replaced the initial `./test/cypress` directory files with my own
+- Added `data-test-id`'s to frontend components
+
+Please take note, I don't have much experience with Cypress.
 
 API-driven scenario:
 - Log in via API
@@ -16,16 +21,15 @@ API-driven scenario:
 - Place order
 - Validate order success
 
-### Notes 
-These are future improvements that were not included into results of this assignment:
-- After all tests run remove user's address and payment method via API call.
-- Create solution to avoid hard code for Total price.
-- Docker setup
-- 
+### TODO: 
+Here are some test improvements that I didn't include in this assignment, but are good to have:
+- Remove user's address and payment method via API call after tests run.
+- Calculate total price of all items in the basket (now it is hardcoded).
+- Update Dockerfile to run tests that I just wrote.
 
 Please follow the instruction below to run the tests locally.
 
-## Instruction to run tests
+## How to Run Tests
 
 #### Step 1
 Clone repository:
@@ -34,36 +38,42 @@ Clone repository:
 git clone https://github.com/yuliia-kuprii/headfirstgroup-assignment.git
 ```
 #### Step 2
-Install dependencies
-Open tab in terminal and run command in juice-shop folder:
+Go to the project root directory:
+```bash
+cd headfirstgroup-assignment
+```
 
+#### Step 3
+From root directory install NodeJS dependencies: 
 ```bash
 npm i
 ```
 
-Build the project
+Build backend:
 ```bash
 npm run build:server
 ```
 
+Build frontend:
 ```bash
 npm build:frontend
 ```
 
+Run the app:
 ```bash
 npm start
 ```
 
-#### Step 3
+#### Step 4
 Run tests
 
-Open second tab in terminal and run command in juice-shop folder:
+In a separate terminal from root directory run tests in UI mode:
 ```bash
-npm run cypress:run
+npm run cypress:open
 ```
-Or run tests in UI mode:
+Or run tests without cypress UI:
 ```bash
- npm run cypress:open
+ npm run cypress:run
 ```
 
 

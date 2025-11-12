@@ -1,6 +1,6 @@
-# HeadFirstGroup Assignment
+# HeadFirst Group Assignment
 
-This repository contains the test scenario written as part of the assignment from HeadFirstGroup. 
+This repository contains the test scenario written as part of the assignment from HeadFirst Group. 
 As part of the assignment, I: 
 - Replaced the initial `./test/cypress` directory files with my own
 - Added `data-test-id`'s to frontend components

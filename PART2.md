@@ -1,5 +1,5 @@
 # Test Plan
-This Test Plan covers PART2 of the HeadfirstGroup assignment.
+This Test Plan covers PART2 of the HeadFirst Group assignment.
 ## Overview
 
 **Test data:** User credentials  

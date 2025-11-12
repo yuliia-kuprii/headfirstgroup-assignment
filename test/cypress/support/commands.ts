@@ -2,6 +2,15 @@ import users from '../fixtures/users'
 
 const { email, password } = users.user;
 
+declare global {
+  namespace Cypress {
+    interface Chainable {
+      loginViaAPI(): Chainable<JQuery<HTMLElement>>
+      createNewUserViaAPI(): Chainable<JQuery<HTMLElement>>
+    }
+  }
+}
+
 Cypress.Commands.add('loginViaAPI', () => {
   cy.session('userSession', () => {
     cy.request({

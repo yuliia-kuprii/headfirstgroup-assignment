@@ -6,7 +6,7 @@ import { DeliveryPage } from '../pages/deliveryPage';
 import { PaymentPage } from '../pages/paymentPage';
 import { OrderSummaryPage } from '../pages/orderSummaryPage'
 
-describe('Products page', () => {
+describe('Golden path scenario', () => {
   const cookieDialogComponent = new CookieDialogComponent();
   const productsPage = new ProductsPage();
   const basketPage = new BasketPage();
@@ -15,9 +15,10 @@ describe('Products page', () => {
   const paymentPage = new PaymentPage();
   const orderSummaryPage = new OrderSummaryPage();
 
-  it('should add products to the Backet', () => {
+  it('Place an order', () => {
     productsPage.goToPage();
     cookieDialogComponent.removeCookieDialog();
+
     productsPage.addAppleJuiceToBasket();
     productsPage.addApplePomaceToBasket();
     productsPage.addBananaJuiceToBasket();
@@ -29,22 +30,22 @@ describe('Products page', () => {
     basketPage.clickCheckoutButton();
 
     addressPage.clickNewAddressButton();
-    addressPage.typeCountryName();
-    addressPage.typeUserName();
-    addressPage.typeMobileNumber();
-    addressPage.typeZipCode();
-    addressPage.typeStreetAddress();
-    addressPage.typeCityName();
+    addressPage.enterCountryName();
+    addressPage.enterUserName();
+    addressPage.enterMobileNumber();
+    addressPage.enterZipCode();
+    addressPage.enterStreetAddress();
+    addressPage.enterCityName();
     addressPage.clickAddressSubmitButton();
     addressPage.clickAddressRadioButton();
     addressPage.clickContinueButton();
 
     deliveryPage.clickStandardDelivery();
     deliveryPage.clickContinueToPayment();
-    
+
     paymentPage.clickNewPaymentCardPanel();
-    paymentPage.typeCardHolderName();
-    paymentPage.typeCardNumber();
+    paymentPage.enterCardHolderName();
+    paymentPage.enterCardNumber();
     paymentPage.selectMonth();
     paymentPage.selectYear();
     paymentPage.clickToSavePaymentCard();
@@ -53,5 +54,5 @@ describe('Products page', () => {
 
     orderSummaryPage.clickOrderButton();
     orderSummaryPage.verifyOrderCompeletionText();
-  })
-})
+  });
+});

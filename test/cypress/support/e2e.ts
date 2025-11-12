@@ -1,6 +1,5 @@
 import '../support/commands';
 
-
 before(() => {
   cy.createNewUserViaAPI()
   .then(() => {

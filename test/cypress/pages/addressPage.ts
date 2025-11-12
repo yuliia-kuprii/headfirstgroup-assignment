@@ -14,27 +14,27 @@ export class AddressPage {
     cy.get(this.addNewAddressButtonSelector).scrollIntoView().should('be.visible').click();
   }
 
-  public typeCountryName() {
+  public enterCountryName() {
     cy.get(this.countryInputSelector).should('be.visible').type('Netherlands');
   }
 
-  public typeUserName() {
+  public enterUserName() {
     cy.get(this.userNameInputSelector).should('be.visible').type('Yuliia');
   }
 
-  public typeMobileNumber() {
+  public enterMobileNumber() {
     cy.get(this.mobileNumberInputSelector).should('be.visible').type('616827641');
   }
 
-  public typeZipCode() {
+  public enterZipCode() {
     cy.get(this.zipCodeInputSelector).should('be.visible').type('2132 LS');
   }
 
-  public typeStreetAddress() {
+  public enterStreetAddress() {
     cy.get(this.addressTextAreaSelector).should('be.visible').type('Taurusavenue 18');
   }
 
-  public typeCityName() {
+  public enterCityName() {
     cy.get(this.cityInputSelector).should('be.visible').type('Hoofddorp');
   }
 
@@ -49,6 +49,4 @@ export class AddressPage {
   public clickContinueButton() {
     cy.get(this.continueButtonSelector).scrollIntoView().should('be.visible').click();
   }
-
-
 }

@@ -3,6 +3,6 @@ const users = {
     email: 'smirskaya.y@gmail.com',
     password: 'Alcina2025!',
   }
-}
+};
 
 export default users;

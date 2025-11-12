@@ -12,11 +12,11 @@ export class PaymentPage {
     cy.get(this.addNewPaymentCardSelector).scrollIntoView().should('be.visible').click();
   }
 
-  public typeCardHolderName() {
+  public enterCardHolderName() {
     cy.get(this.cardHolderNameInputSelector).should('be.visible').type('Yuliia');
   }
 
-  public typeCardNumber() {
+  public enterCardNumber() {
     cy.get(this.cardNumberInputSelector).should('be.visible').type('4000005280000002');
   }
 

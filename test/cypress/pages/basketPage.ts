@@ -4,7 +4,6 @@ export class BasketPage {
   private basketTotalPriceSelector = '[data-test-id="basket-total-price"]';
   private checkoutButtonSelector = '[data-test-id="checkout-button"]';
 
-
   public removeAppleJuiceItemFromBasket() {
     cy.get(this.appleJuiceTrashButtonSelector).should('be.visible').click();
   }
